@@ -37,7 +37,7 @@ function CreateProduct(props: CreateProductProps) {
 
     const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        fetch('http://localhost:5000/api/products', {
+        fetch('https://store-backend-black.vercel.app/api/products', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -50,11 +50,11 @@ function CreateProduct(props: CreateProductProps) {
                 image: imageInput
             })
         })
-        setTitleInput('');
-        setPriceInput(0);
-        setDescriptionInput('');
-        setCategoryInput('');
-        setImageInput('');
+        // setTitleInput('');
+        // setPriceInput(0);
+        // setDescriptionInput('');
+        // setCategoryInput('');
+        // setImageInput('');
         props.onClose();
         props.needUpdateHandler();
     }

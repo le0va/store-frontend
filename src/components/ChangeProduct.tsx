@@ -31,7 +31,7 @@ function ChangeProduct({ product, show, onClose, needUpdateHandler }: ChangeProd
 
     const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        fetch(`http://localhost:5000/api/products/${product.id}`, {
+        fetch(`https://store-backend-black.vercel.app/api/products/${product.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

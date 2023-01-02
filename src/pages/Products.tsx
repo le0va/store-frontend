@@ -15,7 +15,7 @@ function Products(props : ProductsProps) {
     useEffect(() => {
         const sendRequest = async () => {
             setIsLoading(true);
-            const response = await fetch('http://localhost:5000/api/products');
+            const response = await fetch('https://store-backend-black.vercel.app/api/products');
             const responseData = await response.json();
             setLoadedProducts(responseData.products);
             setIsLoading(false);

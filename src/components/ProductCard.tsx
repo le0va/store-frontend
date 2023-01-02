@@ -18,7 +18,7 @@ function ProductCard({ product, needUpdateHandler }: ProductCardProps) {
     const closeChangeProduct = () => setShowChangeProduct(false);
 
     const deleteProductHandler = () => {
-        fetch(`http://localhost:5000/api/products/${product.id}`, {
+        fetch(`https://store-backend-black.vercel.app/api/products/${product.id}`, {
             method: 'DELETE'
         });
         setIsDeleted(true);
